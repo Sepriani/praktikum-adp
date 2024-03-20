@@ -1,61 +1,64 @@
-[Project]
-filename=ADPTM2_SEPRIANI_2310432017_4.C++.dev
-name=ADPTM2_SEPRIANI_2310432017_4.C++
-Type=1
-Ver=2
-ObjFiles=
-Includes=
-Libs=
-PrivateResource=
-ResourceIncludes=
-MakeIncludes=
-Compiler=
-CppCompiler=
-Linker=
-IsCpp=1
-Icon=
-ExeOutput=
-ObjectOutput=
-LogOutput=
-LogOutputEnabled=0
-OverrideOutput=0
-OverrideOutputName=
-HostApplication=
-UseCustomMakefile=0
-CustomMakefile=
-CommandLine=
-Folders=
-IncludeVersionInfo=0
-SupportXPThemes=0
-CompilerSet=0
-CompilerSettings=0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;8;0;0;0
-UnitCount=1
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <limits>
+using namespace std;
 
-[VersionInfo]
-Major=1
-Minor=0
-Release=0
-Build=0
-LanguageID=1033
-CharsetID=1252
-CompanyName=
-FileVersion=
-FileDescription=Developed using the Dev-C++ IDE
-InternalName=
-LegalCopyright=
-LegalTrademarks=
-OriginalFilename=
-ProductName=
-ProductVersion=
-AutoIncBuildNr=0
-SyncProduct=1
+int main(){
+	string nama, jenisKelamin, kotaTujuan, jenisMaskapai;
+	int umur, jumlahTiket;
+	double hargaTiket, totalHarga, diskon;
+	
+	// Input data diri
+	cout << "Masukkan nama: ";
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
+	getline(cin, nama);
+	cout << "Masukkan umur: ";
+	cin >> umur;
+	cout << "Masukkan jenis kelamin: ";
+	cin >> jenisKelamin;
+	
+	// Memilih tujuan keberangkatan 
+	cout << "Pilih tujuan keberangkatan (JAKARTA, BALI, PADANG, ACEH): ";
+	cin >> kotaTujuan;
+	
+	// Menampilkan menu jenis maskapai
+	cout << "Pilih jenis maskapai (ekonomi, bisnis, first class): ";
+	cin >> jenisMaskapai;
+	cout << "Masukkan jumlah tiket yang ingin dibeli: ";
+	cin >> jumlahTiket;
+	
+	//Menghitung harga tiket
+	if (jenisMaskapai == "ekonomi") { 
+		hargaTiket = 1000.0;
+	} else if (jenisMaskapai == "bisnis"){
+		hargaTiket = 2000.0;
+	} else if (jenisMaskapai == "first class"){
+		hargaTiket = 3000.0;
+	}
+	   
 
-[Unit1]
-FileName=ADPTM2_SEPRIANI_2310432017_4.C++.dev
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
+	// Menghitung total harga
+	totalHarga = hargaTiket * jumlahTiket - diskon;
+	
+	// Menghitung diskon jika pembelian lebih dari 3 tiket
+	if (jumlahTiket > 3) {
+		diskon = 0.25 * totalHarga;
+		totalHarga -= diskon;	
+	}
+	
+	
+	// Menampilkan struk pemesanan
+	cout << "\n\n==============Struk Pemesanan============\n";
+	cout << "Nama: " << nama << endl;
+	cout << "Umur: " << umur << endl;
+	cout << "Jenis Kelamin: " << jenisKelamin << endl;
+	cout << "Kota Tujuan: " << kotaTujuan << endl;
+	cout << "Jenis Maskapai: " << jenisMaskapai << endl;
+	cout << "Jumlah Tiket: " << jumlahTiket << endl;
+	cout << "Total Harga: $" << fixed << setprecision(2) << totalHarga << endl;
+	
+	
+	return 0;
+	
+}
