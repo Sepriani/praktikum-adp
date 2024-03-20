@@ -1,0 +1,64 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <limits>
+using namespace std;
+
+int main(){
+	string nama, jenisKelamin, kotaTujuan, jenisMaskapai;
+	int umur, jumlahTiket;
+	double hargaTiket, totalHarga, diskon;
+	
+	// Input data diri
+	cout << "Masukkan nama: ";
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
+	getline(cin, nama);
+	cout << "Masukkan umur: ";
+	cin >> umur;
+	cout << "Masukkan jenis kelamin: ";
+	cin >> jenisKelamin;
+	
+	// Memilih tujuan keberangkatan 
+	cout << "Pilih tujuan keberangkatan (JAKARTA, BALI, PADANG, ACEH): ";
+	cin >> kotaTujuan;
+	
+	// Menampilkan menu jenis maskapai
+	cout << "Pilih jenis maskapai (ekonomi, bisnis, first class): ";
+	cin >> jenisMaskapai;
+	cout << "Masukkan jumlah tiket yang ingin dibeli: ";
+	cin >> jumlahTiket;
+	
+	//Menghitung harga tiket
+	if (jenisMaskapai == "ekonomi") { 
+		hargaTiket = 1000.0;
+	} else if (jenisMaskapai == "bisnis"){
+		hargaTiket = 2000.0;
+	} else if (jenisMaskapai == "first class"){
+		hargaTiket = 3000.0;
+	}
+	   
+
+	// Menghitung total harga
+	totalHarga = hargaTiket * jumlahTiket - diskon;
+	
+	// Menghitung diskon jika pembelian lebih dari 3 tiket
+	if (jumlahTiket > 3) {
+		diskon = 0.25 * totalHarga;
+		totalHarga -= diskon;	
+	}
+	
+	
+	// Menampilkan struk pemesanan
+	cout << "\n\n==============Struk Pemesanan============\n";
+	cout << "Nama: " << nama << endl;
+	cout << "Umur: " << umur << endl;
+	cout << "Jenis Kelamin: " << jenisKelamin << endl;
+	cout << "Kota Tujuan: " << kotaTujuan << endl;
+	cout << "Jenis Maskapai: " << jenisMaskapai << endl;
+	cout << "Jumlah Tiket: " << jumlahTiket << endl;
+	cout << "Total Harga: $" << fixed << setprecision(2) << totalHarga << endl;
+	
+	
+	return 0;
+	
+}
