@@ -1,62 +1,31 @@
-[Project]
-filename=c++ adp tugas 3.c++.dev
-name=c++ adp tugas 3.c++
-Type=1
-Ver=2
-ObjFiles=
-Includes=
-Libs=
-PrivateResource=
-ResourceIncludes=
-MakeIncludes=
-Compiler=
-CppCompiler=
-Linker=
-IsCpp=1
-Icon=
-ExeOutput=
-ObjectOutput=
-LogOutput=
-LogOutputEnabled=0
-OverrideOutput=0
-OverrideOutputName=
-HostApplication=
-UseCustomMakefile=0
-CustomMakefile=
-CommandLine=
-Folders=
-IncludeVersionInfo=0
-SupportXPThemes=0
-CompilerSet=0
-CompilerSettings=0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;8;0;0;0
-UnitCount=1
-
-[VersionInfo]
-Major=1
-Minor=0
-Release=0
-Build=0
-LanguageID=1033
-CharsetID=1252
-CompanyName=
-FileVersion=
-FileDescription=Developed using the Dev-C++ IDE
-InternalName=
-LegalCopyright=
-LegalTrademarks=
-OriginalFilename=
-ProductName=
-ProductVersion=
-AutoIncBuildNr=0
-SyncProduct=1
-
-[Unit1]
-FileName=piramida tugas modul 3 shift 4.c++
-CompileCpp=1
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
+// C++ to display the pattern like pyramid using the alphabet
+#include<iostream>
+using namespace std;
+int main()
+{
+	int W;
+	char lett='A';
+	int no,gap;
+	int tot=1;
+	cout<<"\nPrinting the pattern like pyramid using alphabet\n";
+	cout<<"==================================================\n";
+	cout<<"enter the letters no(<26) in the pyramid : ";
+	cin>>no;
+	for(int k=1;k<=no;k++)
+	{
+		for(gap=1;gap<=no-k;gap++)
+		cout<<"  ";
+		for(W=0;W<=(tot/2);W++)
+		{
+			cout<<lett++<< " ";
+		}
+		lett=lett-2;
+		for(W=0;W<(tot/2);W++)
+		{
+			cout<<lett--<< " ";
+		}
+		tot = tot + 2;
+		lett = 'A';
+		cout << endl;
+	}
+}
