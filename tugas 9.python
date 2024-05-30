@@ -1,0 +1,108 @@
+import os
+from termcolor import colored
+def make_cake():
+
+    # Pilih jenis kue secara acak
+    cake_type = random.choice(["vanilla", "chocolate", "red velvet"])
+    
+    # Pilih jumlah lapisan secara acak
+    num_layers = random.randint(2, 5)
+    
+    # Pilih jumlah krim secara acak
+    cream_amount = random.randint(1, 3)
+    
+    # Pilih jumlah buah-bu acak
+    fruit_amount = random.randint(1, 3)
+    
+    # Pilih jumlah kacang secara acak
+    nut_amount = random.randint(1, 2)
+    
+    # Pilih jumlah topping secara acak
+    topping_amount = random.randint(1, 3)
+    
+    # Pilih jumlah es krim secara acak
+    ice_cream_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_pie_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_pudding_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_frosting_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_sauce_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_whipped_cream_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_fruit = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_chocolate_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_caramel_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_praline_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_pistachio_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_raspberry_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_strawberry_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_blueberry_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_lemon_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_mango_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_pineapple_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_peach_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_cherry_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_blackberry_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_peach_pie_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_pumpkin_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_cinnamon_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_gingerbread_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_smores_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_cake_pops_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_pops_toppings_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_cake_pops_flavors_amount = random.randint(1, 2)
+    
+    # Pilih jumlah kue krim secara acak
+    cream_cake_pops
